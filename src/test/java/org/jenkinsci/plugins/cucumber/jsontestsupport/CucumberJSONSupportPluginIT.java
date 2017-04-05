@@ -176,7 +176,7 @@ public class CucumberJSONSupportPluginIT {
 		htmlPage = wc.getPage(r1, "cucumberTestReport/foo-feature_2");
 		assertThat(htmlPage.asText(), containsString("0 failures"));
 		// check the build is failure
-		jenkinsRule.assertBuildStatus(Result.FAILURE, r1);
+		jenkinsRule.assertBuildStatus(Result.UNSTABLE, r1);
 	}
 
 	@Test
